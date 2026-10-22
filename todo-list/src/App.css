@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #eee7ff, #fce8f3, #e3f1ff);
+  color: #302b43;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+
+.todo-box {
+  width: 100%;
+  max-width: 540px;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid white;
+  border-radius: 25px;
+  box-shadow: 0 20px 60px rgba(93, 69, 140, 0.15);
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+  color: #7653c7;
+  margin-bottom: 8px;
+}
+
+h1::after {
+  content: "Make today count ✨";
+  display: block;
+  margin-top: 7px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #9990ad;
+}
+
+.input-box {
+  display: flex;
+  gap: 10px;
+  margin: 28px 0 25px;
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px 16px;
+  border: 2px solid #eee8fa;
+  border-radius: 13px;
+  outline: none;
+  background: #faf8ff;
+  font-family: inherit;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+input:focus {
+  border-color: #a58ae9;
+  background: white;
+}
+
+button {
+  border: none;
+  border-radius: 11px;
+  padding: 11px 15px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+.input-box button {
+  min-width: 85px;
+  color: white;
+  background: linear-gradient(135deg, #9470e8, #7451c9);
+  box-shadow: 0 5px 12px #9270df40;
+}
+
+ul {
+  list-style: none;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 15px;
+  margin-bottom: 12px;
+  background: #fff;
+  border: 1px solid #eee9f7;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px #49346a08;
+  transition: 0.2s;
+}
+
+.task-item:hover {
+  border-color: #d8cafa;
+  box-shadow: 0 6px 18px #7555b514;
+}
+
+.task-item span {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.edit-btn {
+  color: #6544b5;
+  background: #eee7ff;
+  border: 1px solid #e0d5ff;
+}
+
+.edit-btn:hover {
+  background: #dfd2ff;
+}
+
+.delete-btn {
+  color: #d34f69;
+  background: #fff0f2;
+  border: 1px solid #ffdee5;
+}
+
+.delete-btn:hover {
+  background: #ffdee5;
+}
+
+.empty {
+  text-align: center;
+  padding: 22px 10px;
+  color: #a29ab4;
+  font-size: 13px;
+}
+
+@media (max-width: 480px) {
+  .todo-box {
+    padding: 22px 16px;
+    border-radius: 20px;
+  }
+
+  h1 {
+    font-size: 27px;
+  }
+
+  .task-item {
+    padding: 12px 10px;
+  }
+
+  .actions {
+    gap: 5px;
+  }
+
+  button {
+    padding: 9px 10px;
+    font-size: 11px;
+  }
+}
